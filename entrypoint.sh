@@ -5,6 +5,7 @@ CADDYIndexPage="https://raw.githubusercontent.com/caddyserver/dist/master/welcom
 CONFIGCADDY="https://raw.githubusercontent.com/nkshe/cxdxy/main/etc/Caddyfile"
 CONFIGXRAY="https://raw.githubusercontent.com/nkshe/cxdxy/main/etc/xray.json"
 ParameterSSENCYPT="chacha20-ietf-poly1305"
+PORT=80
 
 # configs
 mkdir -p /etc/caddy/ /usr/share/caddy && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
