@@ -34,12 +34,3 @@ jobs:
             --tag nkshe/cxdxy:latest .
           docker buildx build --push \
             --tag ghcr.io/nkshe/cxdxy:latest .
-      - name: build and push tag
-        if: startsWith(github.ref, 'refs/tags')
-        run: |
-          docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-          docker buildx ls
-          docker buildx build --push \
-            --tag benbusby/whoogle-search:${GITHUB_REF#refs/*/v} .
-          docker buildx build --push \
-            --tag ghcr.io/benbusby/whoogle-search:${GITHUB_REF#refs/*/v} .
